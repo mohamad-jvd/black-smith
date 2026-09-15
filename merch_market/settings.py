@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^(lhcd*qb95l@utrk%d=h%$u=l*p^9=xk4$_l7)lnltnayc1mt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['m0hamadjvd.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'merch_market.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/m0hamadjvd/merch-market/db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 # DATABASES = {
@@ -139,5 +139,5 @@ LOGIN_URL = '/login/'
 
 import os
 
-MEDIA_URL = '/store/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'store/images/')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
