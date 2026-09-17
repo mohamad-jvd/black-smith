@@ -139,5 +139,5 @@ LOGIN_URL = '/login/'
 
 import os
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/store/images/'
+MEDIA_ROOT = BASE_DIR
