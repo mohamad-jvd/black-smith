@@ -18,7 +18,7 @@ header.main-header .main-menu .list>.list-item>a::before {
 header.main-header .main-menu .list>.list-item:hover>a {
     color: #4caf50;
 }
-header.main-header .main-menu .list .list-item-has-children .sub-menu a:hover {
+header.main-header .main-menu .list .list-item-has-children .sub-menu  {
     color: #4caf50;
 }
 header.main-header .main-menu .list .list-item.mega-menu>.sub-menu>li>a:hover {
