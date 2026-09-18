@@ -1582,7 +1582,7 @@ header.main-header .overlay-side-menu {
     text-align: center;
     padding-top: 9px;
     padding-bottom: 10px;
-    background-color: #00bfd6;
+    background-color: #6ec3f9;
     border-top: 1px solid #c6c6c6;
 }
 
@@ -1747,7 +1747,7 @@ main.main-content {
 }
 
 .category-section-slider .category-slider .item h6 {
-    color: #00bfd6;
+    color: #6ec3f9;
     font-size: 12px;
     line-height: 10px;
 }
@@ -2965,7 +2965,7 @@ ul.gallery-options li:hover .tooltip-option {
 
 .product-summary .product-seller-second-line {
     font-size: 14px;
-    color: #00bfd6;
+    color: #6ec3f9;
 }
 
 .product-summary .u-divider:before {
@@ -3163,7 +3163,7 @@ ul.gallery-options li:hover .tooltip-option {
 }
 
 .product-summary .product-seller-row-info {
-    color: #00bfd6;
+    color: #6ec3f9;
     font-weight: 700;
 }
 
@@ -3812,7 +3812,7 @@ input[type=radio]:checked+.ui-variant--check {
     height: 0;
     border-style: solid;
     border-width: 7px 0 0 7px;
-    border-color: transparent transparent transparent #00bfd6;
+    border-color: transparent transparent transparent #6ec3f9;
     transform: rotate(45deg);
 }
 
@@ -4213,7 +4213,7 @@ input[type=radio]:checked+.ui-variant--check {
 }
 
 .content-expert-evaluation-positive span {
-    color: #00bfd6;
+    color: #6ec3f9;
     font-size: 16px;
     line-height: 1.375;
     font-weight: 400;
@@ -4253,7 +4253,7 @@ input[type=radio]:checked+.ui-variant--check {
 }
 
 .content-expert-evaluation-positive ul li:before {
-    background-color: #00bfd6;
+    background-color: #6ec3f9;
 }
 
 .comments-area ol.comment-list .footer {
@@ -4397,7 +4397,7 @@ input[type=radio]:checked+.ui-variant--check {
 }
 
 .comments-add-col--content .cl-circle-title.cl-primary {
-    background: #00bfd6;
+    background: #6ec3f9;
 }
 
 .comments-add-col--content .cl-circle-title.cl-red {
@@ -4462,7 +4462,7 @@ input[type=radio]:checked+.ui-variant--check {
     right: 16px;
     top: 6px;
     border-radius: 4px;
-    background: #00bfd6;
+    background: #6ec3f9;
     content: "";
 }
 
@@ -4833,7 +4833,7 @@ input[type=radio]:checked+.ui-variant--check {
 }
 
 .profile-sidebar-header .profile-point .label-profile-point {
-    color: #00BFD6;
+    color: #6ec3f9;
     font-size: 16px;
     font-weight: bold;
 }
@@ -4851,7 +4851,7 @@ input[type=radio]:checked+.ui-variant--check {
 }
 
 .profile-sidebar-header .profile-link a:hover {
-    color: #00BFD6;
+    color: #6ec3f9;
 }
 
 .profile-sidebar .profile-menu-section .label-profile-menu {
@@ -4871,7 +4871,7 @@ input[type=radio]:checked+.ui-variant--check {
 
 .profile-sidebar .profile-menu-section .profile-menu ul li a.active,
 .profile-sidebar .profile-menu-section .profile-menu ul li a:hover {
-    color: #00BFD6;
+    color: #6ec3f9;
     background-color: #f6ffff;
 }
 
@@ -5015,7 +5015,7 @@ input[type=radio]:checked+.ui-variant--check {
 }
 
 .profile-section .list-favorites li a span:hover {
-    color: #00BFD6;
+    color: #6ec3f9;
 }
 
 .profile-section .list-favorites li a img {
@@ -5063,7 +5063,7 @@ a.border-bottom-dt {
 }
 
 .table-order thead {
-    background-color: #00BFD6;
+    background-color: #6ec3f9;
     color: #fff;
 }
 
@@ -5160,7 +5160,7 @@ a.border-bottom-dt {
 
 .table-draught div span.title {
     display: block;
-    color: #00BFD6;
+    color: #6ec3f9;
     font-size: 17px;
     font-weight: bold;
 }
@@ -5329,7 +5329,7 @@ a.border-bottom-dt {
     bottom: 3px;
     width: 0;
     height: 0;
-    border-color: transparent #00bfd6 transparent transparent;
+    border-color: transparent #6ec3f9 transparent transparent;
     border-style: solid;
     border-width: 7px 7px 7px 0;
 }
@@ -6831,7 +6831,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .checkout-alert-highlighted-success {
-    color: #00bfd6;
+    color: #6ec3f9;
     background-color: #ebfdff;
 }
 
@@ -7042,7 +7042,7 @@ input[type=number]::-webkit-outer-spin-button {
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, #00bfd6 48px, #ff7e7e 0) repeat-x;
+    background: linear-gradient(90deg, #6ec3f9 48px, #ff7e7e 0) repeat-x;
     background-size: 96px 3px;
 }
 
