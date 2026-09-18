@@ -1,5 +1,5 @@
 """
-WSGI config for merch_market project.
+WSGI config for black_smith project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'merch_market.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'black_smith.settings')
 
 application = get_wsgi_application()
