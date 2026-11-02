@@ -107,6 +107,23 @@
             </div>
             <!-- End topbar -->
 
+            <!-- Start Mobile Search -->
+            <div class="container main-container mobile-search-wrapper">
+                <div class="mobile-search">
+                    <form method="GET" action="{% url 'app_market:search' %}">
+                        <input
+                            type="text"
+                            name="q"
+                            placeholder="جستجوی محصولات، برند و دسته‌بندی..."
+                        >
+                        <button type="submit">
+                            <i class="far fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <!-- End Mobile Search -->
+
             <!-- Start bottom-header -->
             <div class="bottom-header dt-sl mb-sm-bottom-header">
                 <div class="container main-container">
@@ -370,7 +387,7 @@
             <div class="copyright">
                 <div class="container main-container">
                     <p>
-                        <h4 style="font-family: 'Cairo', sans-serif;">بلک اسمیت</h4>
+                        <h4 style="font-family: 'Cairo', sans-serif;">Blacksmith</h4>
                     </p>
                 </div>
             </div>

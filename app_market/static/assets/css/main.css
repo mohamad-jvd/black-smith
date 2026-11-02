@@ -9203,3 +9203,140 @@ footer.mini-footer .copy-right-mini-footer {
 }
 
 /* responsive */
+
+/* یکسان کردن ارتفاع کارت محصولات */
+.slider-section .product-card {
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* بخش تصویر محصول */
+.slider-section .product-thumb {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-section .product-thumb img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* محتوای کارت */
+.slider-section .product-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* قرار گرفتن قیمت در پایین کارت */
+.slider-section .product-price {
+    margin-top: auto;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* یکسان‌سازی ارتفاع کارت محصولات دسته‌بندی */
+#productResults .product-card {
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* تصویر محصولات */
+#productResults .product-thumb {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#productResults .product-thumb img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* محتوای کارت */
+#productResults .product-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* قیمت در پایین کارت */
+#productResults .product-price {
+    margin-top: auto;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    .mobile-search-wrapper {
+        display: block;
+    }
+
+    .mobile-search {
+        padding: 10px 0;
+    }
+
+    .mobile-search form {
+        display: flex;
+        align-items: center;
+        height: 46px;
+        background: #ffffff;
+        border: 1px solid #6ec3f9;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(110, 195, 249, 0.15);
+    }
+
+    .mobile-search input {
+        flex: 1;
+        min-width: 0;
+        height: 100%;
+        background: #ffffff;
+        border: none;
+        outline: none;
+        color: #232129;
+        padding: 0 12px;
+        direction: rtl;
+        font-family: inherit;
+    }
+
+    .mobile-search input::placeholder {
+        color: #888888;
+    }
+
+    .mobile-search button {
+        width: 48px;
+        height: 100%;
+        border: none;
+        background: #eaf6ff;
+        color: #269bdc;
+        font-size: 18px;
+        transition: 0.2s;
+    }
+
+    .mobile-search button:hover {
+        background: #6ec3f9;
+        color: #ffffff;
+    }
+}
+
+/* مخفی بودن سرچ موبایل در دسکتاپ */
+.mobile-search-wrapper {
+    display: none !important;
+}
+
+/* نمایش فقط در موبایل */
+@media (max-width: 767px) {
+    .mobile-search-wrapper {
+        display: block !important;
+    }
+}

@@ -5,10 +5,13 @@
     <div class="product-card mb-3 shadow-unset">
         <div class="product-head">
             <div class="rating-stars">
-               
             </div>
-            <div class="discount">
-            </div>
+
+            {% if product.discount %}
+                <div class="discount" style="background:transparent !important; color:#6ec3f9; padding:0;">
+                    {{ product.discount }}٪
+                </div>
+            {% endif %}
         </div>
         <a class="product-thumb" href="{{ product.get_absolute_url }}">
             <img src="{{ product.images.first.image.url }}" alt="Product Thumbnail">
@@ -22,7 +25,27 @@
                 {{ category.name }}{% if not forloop.last %}،{% endif %}
                 {% endfor %}
             </a>
-            <span class="product-price"> {{ product.price|intcomma }} تومان</span>
+            <div class="product-price">
+
+                {% if product.discount %}
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+
+                        <del style="color:#999; font-size:12px;">
+                            {{ product.price|intcomma }} تومان
+                        </del>
+
+                        <span style="color:#6ec3f9; font-weight:bold;">
+                            {{ product.discounted_price|intcomma }} تومان
+                        </span>
+
+                    </div>
+                {% else %}
+                    <span>
+                        {{ product.price|intcomma }} تومان
+                    </span>
+                {% endif %}
+
+            </div>
         </div>
     </div>
 </div>
