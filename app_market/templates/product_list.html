@@ -48,23 +48,14 @@
 
                                                     {% if product.discount and product.discounted_price < product.price %}
 
-                                                        <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
-
-                                                            <del style="color:#999; font-size:12px;">
-                                                                {{ product.price|intcomma }} تومان
-                                                            </del>
-
-                                                            <span style="color:#6ec3f9; font-weight:bold;">
-                                                                {{ product.discounted_price|intcomma }} تومان
-                                                            </span>
-
+                                                        <div class="mobile-discount-price">
+                                                            <del>{{ product.price|intcomma }}</del>
+                                                            <span>{{ product.discounted_price|intcomma }} تومان</span>
                                                         </div>
 
                                                     {% else %}
 
-                                                        <span>
-                                                            {{ product.price|intcomma }} تومان
-                                                        </span>
+                                                        <span>{{ product.price|intcomma }} تومان</span>
 
                                                     {% endif %}
 

@@ -9340,3 +9340,97 @@ footer.mini-footer .copy-right-mini-footer {
         display: block !important;
     }
 }
+
+/* Mobile product cards - horizontal layout */
+@media (max-width: 767px) {
+
+    #productResults .product-card {
+        height: auto !important;
+        min-height: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        padding: 15px !important;
+        margin-bottom: 12px !important;
+    }
+
+    #productResults .product-thumb {
+        width: 105px !important;
+        min-width: 105px !important;
+        height: 115px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #productResults .product-thumb img {
+        width: auto !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 100px !important;
+        object-fit: contain !important;
+    }
+
+    #productResults .product-card-body {
+        flex: 1 !important;
+        min-width: 0 !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        text-align: right !important;
+        padding: 0 10px !important;
+    }
+
+    #productResults .product-title {
+        margin-bottom: 5px !important;
+    }
+
+    #productResults .product-meta {
+        margin-bottom: 8px !important;
+    }
+
+    #productResults .product-price {
+        min-height: 0 !important;
+        margin-top: 0 !important;
+        display: block !important;
+        text-align: right !important;
+    }
+}
+
+/* فقط موبایل */
+@media (max-width: 767px) {
+
+    #productResults .mobile-discount-price {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        direction: rtl !important;
+        gap: 5px;
+        width: 100%;
+        text-align: left !important;
+    }
+
+    #productResults .mobile-discount-price del {
+        color: #999;
+        font-size: 11px;
+    }
+
+    #productResults .mobile-discount-price span {
+        color: #6ec3f9;
+        font-weight: bold;
+        font-size: 11px;
+    }
+}
+
+/* رنگ قیمت محصولات تخفیف‌دار در دسکتاپ */
+#productResults .mobile-discount-price del {
+    color: #999 !important;
+    font-size: 13px;
+}
+
+#productResults .mobile-discount-price span {
+    color: #6ec3f9 !important;
+    font-weight: bold;
+}
