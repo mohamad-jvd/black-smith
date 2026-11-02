@@ -9434,3 +9434,38 @@ footer.mini-footer .copy-right-mini-footer {
     color: #6ec3f9 !important;
     font-weight: bold;
 }
+
+/* Black Smith Footer Theme */
+.main-footer.dt-sl {
+    background-color: #232129 !important;
+    color: #6ec3f9 !important;
+}
+
+.main-footer.dt-sl .card,
+.main-footer.dt-sl .card-header {
+    background-color: #232129 !important;
+    border-color: #3a3742 !important;
+}
+
+.main-footer.dt-sl h1,
+.main-footer.dt-sl h2,
+.main-footer.dt-sl h3,
+.main-footer.dt-sl h4,
+.main-footer.dt-sl p,
+.main-footer.dt-sl span,
+.main-footer.dt-sl a,
+.main-footer.dt-sl li {
+    color: #6ec3f9 !important;
+}
+
+.main-footer.dt-sl a:hover {
+    color: #ffffff !important;
+}
+
+.main-footer.dt-sl .copyright {
+    background-color: #1b1a20 !important;
+}
+
+.main-footer.dt-sl .back-to-top {
+    background-color: #232129 !important;
+}
