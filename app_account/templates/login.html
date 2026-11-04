@@ -11,6 +11,9 @@
     <meta name="msapplication-navbutton-color" content="#6ec3f9">
     <meta name="apple-mobile-web-app-status-bar-style" content="#6ec3f9">
     <title>Blacksmith | Login Page</title>
+    {% if site_settings and site_settings.favicon %}
+        <link rel="icon" href="{{ site_settings.favicon.url }}">
+    {% endif %}
     <!-- Font Icon -->
     <link rel="stylesheet" href="{% static '/assets/css/vendor/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static '/assets/css/vendor/materialdesignicons.min.css' %}">
@@ -47,7 +50,13 @@
                     <div class="col-xl-4 col-lg-5 col-md-7 col-12 mx-auto">
                         {{ user.username }}
                         <div class="logo-area text-center mb-3">
-                            <a href="#"><img src="{% static '/assets/img/logo.PNG' %}" class="img-fluid" alt="logo"></a>
+                            <a href="#">
+                                {% if site_settings and site_settings.logo %}
+                                    <img src="{{ site_settings.logo.url }}" class="img-fluid" alt="Black Smith">
+                                {% else %}
+                                    <img src="{% static '/assets/img/logo.PNG' %}" class="img-fluid" alt="Black Smith">
+                                {% endif %}
+                            </a>
                         </div>
                         <div class="auth-wrapper form-ui border pt-4">
                             <div class="section-title title-wide mb-1 no-after-title-wide">

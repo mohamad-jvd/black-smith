@@ -14,15 +14,38 @@
                         <div class="row">
                             <div class="col-12 mb-1">
                                 <div class="widget-banner">
-                                    <a href="{% url 'app_market:product_list_by_category' category_id=1 %}">
-                                        <img src="{% static '/assets/img/banner/banner-side-slider-1.jpg' %}" alt="">
+
+                                    {% if site_settings and site_settings.top_banner_1_category_num %}
+                                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.top_banner_1_category_num %}">
+                                    {% else %}
+                                        <a href="{% url 'app_market:home' %}">
+                                    {% endif %}
+
+                                        {% if site_settings and site_settings.top_banner_1 %}
+                                            <img src="{{ site_settings.top_banner_1.url }}" alt="">
+                                        {% else %}
+                                            <img src="{% static '/assets/img/banner/banner-side-slider-1.jpg' %}" alt="">
+                                        {% endif %}
+
                                     </a>
                                 </div>
                             </div>
+
                             <div class="col-12">
                                 <div class="widget-banner">
-                                    <a href="{% url 'app_market:product_list_by_category' category_id=1 %}">
-                                        <img src="{% static '/assets/img/banner/banner-side-slider-2.jpg' %}" alt="">
+
+                                    {% if site_settings and site_settings.top_banner_2_category_num %}
+                                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.top_banner_2_category_num %}">
+                                    {% else %}
+                                        <a href="{% url 'app_market:home' %}">
+                                    {% endif %}
+
+                                        {% if site_settings and site_settings.top_banner_2 %}
+                                            <img src="{{ site_settings.top_banner_2.url }}" alt="">
+                                        {% else %}
+                                            <img src="{% static '/assets/img/banner/banner-side-slider-2.jpg' %}" alt="">
+                                        {% endif %}
+
                                     </a>
                                 </div>
                             </div>
@@ -122,7 +145,11 @@
             <div class="col-xl-2 col-lg-3 hidden-lg pr-0">
                 <div class="widget-suggestion dt-sn border pt-3 mt-3">
                     <div class="widget-suggestion-title">
-                        <img src="{% static '/assets/img/theme/suggestion-title.png' %}" alt="">
+                        {% if site_settings and site_settings.instant_suggestion %}
+                            <img src="{{ site_settings.instant_suggestion.url }}" alt="پیشنهاد لحظه‌ای">
+                        {% else %}
+                            <img src="{% static '/assets/img/theme/suggestion-title.png' %}" alt="پیشنهاد لحظه‌ای">
+                        {% endif %}
                     </div>
                     <div id="progressBar">
                         <div class="slide-progress"></div>
@@ -140,15 +167,38 @@
         <div class="row mt-3 mb-5">
             <div class="col-sm-6 col-12 mb-2">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/medium-banner-1.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.bestseller_banner_1_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.bestseller_banner_1_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.bestseller_banner_1 %}
+                            <img src="{{ site_settings.bestseller_banner_1.url }}" alt="">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/medium-banner-1.jpg' %}" alt="">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
+
             <div class="col-sm-6 col-12 mb-2">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/medium-banner-2.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.bestseller_banner_2_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.bestseller_banner_2_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.bestseller_banner_2 %}
+                            <img src="{{ site_settings.bestseller_banner_2.url }}" alt="">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/medium-banner-2.jpg' %}" alt="">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
@@ -165,7 +215,11 @@
                         <div class="item">
                             <div class="amazing-product text-center pt-5">
                                 <a href="#">
-                                    <img src="{% static '/assets/img/theme/amazing-1.png' %}" alt="">
+                                    {% if site_settings and site_settings.special_offer %}
+                                        <img src="{{ site_settings.special_offer.url }}" alt="پیشنهاد شگفت‌انگیز">
+                                    {% else %}
+                                        <img src="{% static '/assets/img/theme/amazing-1.png' %}" alt="پیشنهاد شگفت‌انگیز">
+                                    {% endif %}
                                 </a>
                                 <a href="#" class="view-all-amazing-btn">
                                     مشاهده همه
@@ -188,29 +242,76 @@
         <div class="row mt-3 mb-5">
             <div class="col-md-3 col-sm-6 col-6 mb-2">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/small-banner-5.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.category_banner_1_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.category_banner_1_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.category_banner_1 %}
+                            <img src="{{ site_settings.category_banner_1.url }}" alt="">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/small-banner-5.jpg' %}" alt="">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6 col-6 mb-2">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/small-banner-6.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.category_banner_2_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.category_banner_2_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.category_banner_2 %}
+                            <img src="{{ site_settings.category_banner_2.url }}" alt="">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/small-banner-6.jpg' %}" alt="">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6 col-6 mb-2">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/small-banner-7.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.category_banner_3_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.category_banner_3_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.category_banner_3 %}
+                            <img src="{{ site_settings.category_banner_3.url }}" alt="">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/small-banner-7.jpg' %}" alt="">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6 col-6 mb-2">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/small-banner-8.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.category_banner_4_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.category_banner_4_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.category_banner_4 %}
+                            <img src="{{ site_settings.category_banner_4.url }}" alt="">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/small-banner-8.jpg' %}" alt="">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
@@ -227,8 +328,19 @@
         <div class="row mt-3 mb-5">
             <div class="col-12">
                 <div class="widget-banner">
-                    <a href="#">
-                        <img src="{% static '/assets/img/banner/large-banner.jpg' %}" alt="">
+
+                    {% if site_settings and site_settings.bottom_banner_category_num %}
+                        <a href="{% url 'app_market:product_list_by_category' category_id=site_settings.bottom_banner_category_num %}">
+                    {% else %}
+                        <a href="{% url 'app_market:home' %}">
+                    {% endif %}
+
+                        {% if site_settings and site_settings.bottom_banner %}
+                            <img src="{{ site_settings.bottom_banner.url }}" alt="Black Smith">
+                        {% else %}
+                            <img src="{% static '/assets/img/banner/large-banner.jpg' %}" alt="Black Smith">
+                        {% endif %}
+
                     </a>
                 </div>
             </div>
@@ -274,37 +386,21 @@
         <!-- Start Brand-Slider -->
         <section class="slider-section dt-sl mb-5">
             <div class="row">
-                <!-- Start Product-Slider -->
                 <div class="col-12">
                     <div class="brand-slider carousel-lg owl-carousel owl-theme">
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/1076.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/1078.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/1080.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/2315.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/1086.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/5189.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/1000006973.png' %}" class="img-fluid" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="{% static '/assets/img/brand/1000014452.jpg' %}" class="img-fluid" alt="">
-                        </div>
+                        {% for brand in site_brands %}
+                            <div class="item">
+                                {% if brand.website_url %}
+                                    <a href="{{ brand.website_url }}" target="_blank" rel="noopener noreferrer">
+                                        <img src="{{ brand.image.url }}" class="img-fluid" alt="{{ brand.name }}">
+                                    </a>
+                                {% else %}
+                                    <img src="{{ brand.image.url }}" class="img-fluid" alt="{{ brand.name }}">
+                                {% endif %}
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
-                <!-- End Product-Slider -->
-
             </div>
         </section>
         <!-- End Brand-Slider -->

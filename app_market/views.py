@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from .models import Banner,Product,Category,Blog,Blog_detail,Color
+from .models import Banner,Product,Category,Blog,Blog_detail,Color,SiteSettings
 from django.db.models import Q
 from app_social.models import Comment,Question
 from app_social.forms import CommentForm,QuestionForm,AnswerForm
@@ -48,6 +48,8 @@ def index(request):
 
     context = {
         'banner_images': Banner.objects.get(title='index_banner'),
+        'site_settings': SiteSettings.objects.first(),
+
         'products': Product.objects.all(),
         'sugessted_products': Product.objects.filter(is_suggested=True),
         'amazing_products': Product.objects.filter(is_amazing=True),
@@ -55,8 +57,9 @@ def index(request):
         'footer_left': Product.objects.filter(footer_left=True),
         'footer_Middle': Product.objects.filter(footer_Middle=True),
         'category': Category.objects.all(),
-        'item_count': item_count  
+        'item_count': item_count
     }
+
     return render(request, 'index.html', context)
 
 

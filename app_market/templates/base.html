@@ -10,6 +10,9 @@
     <meta name="msapplication-navbutton-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <title>Blacksmith | Index Page</title>
+    {% if site_settings and site_settings.favicon %}
+        <link rel="icon" href="{{ site_settings.favicon.url }}">
+    {% endif %}
     <!-- Font Icon -->
     <link rel="stylesheet" href="{% static '/assets/css/vendor/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static '/assets/css/vendor/materialdesignicons.min.css' %}">
@@ -45,7 +48,11 @@
                         <div class="col-lg-2 col-md-3 col-6">
                             <div class="logo-area">
                                 <a href="{% url 'app_market:home' %}">
-                                    <img src="{% static '/assets/img/logo.PNG' %}" alt="">
+                                    {% if site_settings and site_settings.logo %}
+                                        <img src="{{ site_settings.logo.url }}" alt="Black Smith">
+                                    {% else %}
+                                        <img src="{% static '/assets/img/logo.PNG' %}" alt="Black Smith">
+                                    {% endif %}
                                 </a>
                             </div>
                         </div>
@@ -267,7 +274,11 @@
                         <div class="side-menu">
                             <div class="logo-nav-res dt-sl text-center">
                                 <a href="#">
-                                    <img src="{% static 'assets/img/logo.PNG' %}" alt="">
+                                    {% if site_settings and site_settings.logo %}
+                                        <img src="{{ site_settings.logo.url }}" alt="Black Smith">
+                                    {% else %}
+                                        <img src="{% static 'assets/img/logo.PNG' %}" alt="Black Smith">
+                                    {% endif %}
                                 </a>
                             </div>
                             <ul class="navbar-nav dt-sl">
